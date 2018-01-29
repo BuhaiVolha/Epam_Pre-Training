@@ -16,7 +16,7 @@ public class Logic {
 
     public static double getSOfRing(double r1, double r2) {
         double s = PI * (pow(r1,2) - pow(r2,2));
-        return s;
+        return abs(s);
     }
 
     public static void changePlaces(int a, int b) {
@@ -29,82 +29,53 @@ public class Logic {
 
     public static boolean isRising(int n) {
         n = abs(n);
-        boolean isRising = true;
-        int digit;
+        int i = 0;
 
-        while (n > 0) {
-            digit = n % 10;
-            n = n / 10;
-            if (n % 10 >= digit) {
-                isRising = false;
-                break;
-            }
-        }
-        return isRising;
+        String s = Integer.toString(n);
+        return s.charAt(i++) < s.charAt(i) && s.charAt(i++) < s.charAt(i) && s.charAt(i++) < s.charAt(i);
     }
 
     public static boolean isDecreasing(int n) {
         n = abs(n);
-        boolean isDecreasing = true;
-        String num = Integer.toString(n);
+        int i = 0;
 
-        for (int i = 1; i < num.length(); i++) {
-            if (num.charAt(i) >= num.charAt(i-1)) {
-                isDecreasing = false;
-                break;
-            }
-        }
-        return isDecreasing;
+        String s = Integer.toString(n);
+        return s.charAt(i++) > s.charAt(i) && s.charAt(i++) > s.charAt(i) && s.charAt(i++) > s.charAt(i);
     }
 
     public static int getSumOfDigits(int n) {
         n = abs(n);
-        int sum = 0;
 
-        while (n > 0) {
-            sum += n % 10;
-            n = n / 10;
-        }
-        return sum;
+        return n % 10 + (n / 10) % 10 + (n / 100) % 10 + (n / 1000) % 10 + (n / 10_000) % 10;
     }
 
     public static int getMultOfDigits(int n) {
         n = abs(n);
-        int mult = 1;
 
-        for ( ; n > 0; n /= 10) {
-            mult *= n % 10;
-        }
-        return mult;
+        return (n % 10 * ((n / 10) % 10) * ((n / 100) % 10) * ((n / 1000) % 10) * ((n / 10_000) % 10));
     }
 
     public static double getArithmeticMean(int n) {
-        double sum = (double)getSumOfDigits(n);
-        return sum / Integer.toString(n).length();
+        n = abs(n);
+
+        double sum = n % 10 + (n / 10) % 10 + (n / 100) % 10 + (n / 1000) % 10
+                + (n / 10_000) % 10 + (n / 100_000) % 10;
+        return sum/6;
     }
 
     public static double getGeometricMean(int n) {
         n = abs(n);
-        double mult = 1;
-        int digitsCounter = 0;
 
-        while (n > 0) {
-            mult *= n % 10;
-            n = n / 10;
-            digitsCounter++;
-        }
-        return pow(mult,1/(double)digitsCounter);
+        double mult = (n % 10 * ((n / 10) % 10) * ((n / 100) % 10)
+                * ((n / 1000) % 10) * ((n / 10_000) % 10) * ((n / 100_000) % 10));
+        return pow(mult,1.0/6);
     }
 
     public static int reverseNum(int n) {
         n = abs(n);
-        StringBuilder reversed = new StringBuilder( "" + n % 10);
-        n = n/10;
 
-        while (n > 0) {
-            reversed.append(n % 10);
-            n /= 10;
-        }
-        return Integer.valueOf(reversed.toString());
+        String s = "" + n % 10 + (n / 10) % 10 + (n / 100) % 10 + (n / 1000) % 10
+                + (n / 10_000) % 10 + (n / 100_000) % 10 + (n / 1_000_000) % 10;
+        return Integer.parseInt(s);
     }
 }
