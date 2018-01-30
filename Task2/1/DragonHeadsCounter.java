@@ -12,11 +12,11 @@ public class DragonHeadsCounter {
                 print("Драконы столько не живут!");
             }
         } while (age <= 0);
-        print("Количество голов: " + HeadsCounter.countHeads(age));
+        print("Количество голов: " + DragonHeadsCounterLogic.countHeads(age));
     }
 }
 
-class HeadsCounter {
+class DragonHeadsCounterLogic {
 
     public static int countHeads(int age) {
         int heads;
