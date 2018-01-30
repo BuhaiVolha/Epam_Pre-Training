@@ -52,6 +52,51 @@ class LetterDefinerLogic {
 
         if (letter == 'а') {
             isConsonant = false;
+        } else {
+            if (letter == 'о') {
+                isConsonant = false;
+            } else {
+                if (letter == 'у') {
+                    isConsonant = false;
+                } else {
+                    if (letter == 'э') {
+                        isConsonant = false;
+                    } else {
+                        if (letter == 'и') {
+                            isConsonant = false;
+                        } else {
+                            if (letter == 'я') {
+                                isConsonant = false;
+                            } else {
+                                if (letter == 'ё') {
+                                    isConsonant = false;
+                                } else {
+                                    if (letter == 'е') {
+                                        isConsonant = false;
+                                    } else {
+                                        if (letter == 'ю') {
+                                            isConsonant = false;
+                                        } else {
+                                            if (letter == 'ы') {
+                                                isConsonant = false;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return isConsonant;
+    }
+    
+    public static boolean isConsonant4(char letter) {
+        boolean isConsonant = true;
+
+        if (letter == 'а') {
+            isConsonant = false;
         } else if (letter == 'о') {
             isConsonant = false;
         } else if (letter == 'у') {
@@ -74,7 +119,7 @@ class LetterDefinerLogic {
         return isConsonant;
     }
 
-    public static boolean isConsonant4(char letter) {
+    public static boolean isConsonant5(char letter) {
         boolean isConsonant = true;
 
         String vowels = "аоеиыэёуюя";
@@ -84,7 +129,7 @@ class LetterDefinerLogic {
         return isConsonant;
     }
 
-    public static boolean isConsonant5(char letter) {
+    public static boolean isConsonant6(char letter) {
         boolean isConsonant = true;
 
         String vowels = "аоеиыэёуюя";
@@ -94,7 +139,7 @@ class LetterDefinerLogic {
         return isConsonant;
     }
 
-    public static boolean isConsonant6(char letter) {
+    public static boolean isConsonant7(char letter) {
         boolean isConsonant = true;
         char[] vowels = {'а','о','е','и','ы','э','ё','у','ю','я'};
 
@@ -107,7 +152,7 @@ class LetterDefinerLogic {
         return isConsonant;
     }
 
-    public static boolean isConsonant7(char letter) {
+    public static boolean isConsonant8(char letter) {
         boolean isConsonant = true;
 
         Pattern p = Pattern.compile("[аоеиыэёуюя]");
@@ -118,7 +163,7 @@ class LetterDefinerLogic {
         return isConsonant;
     }
 
-    public static boolean isConsonant8(char letter) {
+    public static boolean isConsonant9(char letter) {
 
         Constantable c = l -> {
             for (Vowels v : Vowels.values()) {
