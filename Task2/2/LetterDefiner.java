@@ -129,9 +129,7 @@ class LetterDefinerLogic {
             return true;
         };
 
-        boolean isConsonant = c.isConstantable(letter);
-
-        return isConsonant;
+        return c.isConstantable(letter);
     }
 
     public interface Constantable {
