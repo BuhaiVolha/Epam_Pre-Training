@@ -71,10 +71,10 @@ class NextDayDaterLogic {
         } else {
             day++;
         }
-        String s = (day < 10) ? "0" + day : "" + day;
-        s += (month < 10) ? ".0" + month + "." + year + " г."
-                : "." + month + "." + year + " г.";
-        return s;
+        
+        return String.join(".", day < 10 ? "0" + day : "" + day,
+                                month < 10 ? "0" + month : "" + month, 
+                                year + " г", "");
     }
 
     public static boolean validateDay(int day) {
