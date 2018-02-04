@@ -52,7 +52,7 @@ class NextDayDaterWithArraysLogic {
         }
 
         if (day > MONTH_DAYS[month - 1]) {
-            throw new IllegalArgumentException("Invalid month's length!");
+            throw new IllegalArgumentException("Invalid length of month!");
         }
 
         if ((month == 2) && (!isLeapYear(year)) && (day == 29)) {
