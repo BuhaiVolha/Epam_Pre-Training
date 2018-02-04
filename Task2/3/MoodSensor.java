@@ -4,7 +4,7 @@ import static Epam_Pre-Training.Task2.Printer.print;
 public class MoodSensor {
 
     public static void main(String[] args) {
-        print("Ваше настроение - " + MoodSensorLogic.moodCreator1());
+        print("Your mood is " + MoodSensorLogic.moodCreator1());
     }
 }
 
@@ -30,7 +30,8 @@ class MoodSensorLogic {
         String[] nose = {"", "-"};
         String[] mouth = {"3", ")", "/", "O", "P", "(", "D", "C"};
 
-        return "" + eyes[new Random().nextInt(eyes.length)] + nose[new Random().nextInt(nose.length)] +
-                mouth[new Random().nextInt(mouth.length)];
+        return "" + eyes[new Random().nextInt(eyes.length)] 
+            + nose[new Random().nextInt(nose.length)] 
+            + mouth[new Random().nextInt(mouth.length)];
     }
 }
