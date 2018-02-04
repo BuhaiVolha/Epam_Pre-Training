@@ -7,26 +7,34 @@ public class DragonHeadsCounter {
         int age;
 
         do {
-            age = inputInt("Сколько дракону лет?");
+            age = inputInt("How old is the dragon?");
             if (age <= 0) {
-                print("Драконы столько не живут!");
+                print("The age is wrong!");
             }
         } while (age <= 0);
-        print("Количество голов: " + DragonHeadsCounterLogic.countHeads(age));
+        
+        print("The amount of heads is " + Logic.countHeads(age));
     }
 }
 
-class DragonHeadsCounterLogic {
+class Logic {
+    private final static int HEADS_TILL_200 = 3;
+    private final static int HEADS_AFTER_200 = 2;
 
     public static int countHeads(int age) {
         int heads;
 
         if (age < 200) {
             heads = age * 3;
+            
         } else if (age < 300) {
-            heads = 2 * (age - 200) + 600;
+            heads = HEADS_TILL_200 * 200
+                    + HEADS_AFTER_200 * (age - 200);
+            
         } else {
-            heads = (age - 300) + 800;
+            heads = HEADS_TILL_200 * 200
+                    + HEADS_AFTER_200 * 100
+                    + (age - 300);
         }
         return heads;
     }
