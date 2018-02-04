@@ -7,7 +7,7 @@ public class NextDayDaterWithArrays {
         int month = 12;
         int year = 2020;
 
-        print("The date of the next day is"
+        print("The next day is "
                 + NextDayDaterWithArraysLogic.getNextDay(day, month, year));
     }
 }
@@ -22,7 +22,8 @@ class NextDayDaterWithArraysLogic {
 
     public static String getNextDay(int day, int month, int year) {
 
-        NextDayDaterWithArraysLogic.validateDate(day, month, year);
+        validateDate(day, month, year);
+        
         if (((month == 2) && (!isLeapYear(year)) && (day == 28))
             || (day == MONTH_DAYS[month - 1])) {
             day = 1;
