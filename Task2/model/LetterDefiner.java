@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LetterDefiner {
-    public final static String VOWELS = "aeuioy";
+    private final static String VOWELS = "aeuioy";
 
     public static boolean isConsonant1(char letter) {
         letter = Character.toLowerCase(letter);
