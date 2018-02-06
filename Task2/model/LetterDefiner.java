@@ -16,9 +16,7 @@ public class LetterDefiner {
             case 'e':
             case 'u':
             case 'i':
-            case 'y':
-                isConsonant = false;
-                break;
+            case 'y': isConsonant = false; break;
         }
         return isConsonant;
     }
