@@ -132,7 +132,6 @@ public class LetterDefiner {
 
 
     enum Vowels {
-
         a('a'), y('y'),
         o('o'), i('i'),
         e('e'), u('u');
