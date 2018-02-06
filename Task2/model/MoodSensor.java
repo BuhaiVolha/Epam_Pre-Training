@@ -3,7 +3,7 @@ package by.epam_pre_training.task2;
 import java.util.Random;
 
 public class MoodSensor {
-    public final static int MOOD_NUMBER = 5;
+    private final static int MOOD_NUMBER = 5;
 
     public static String moodCreator1() {
         String mood = "";
