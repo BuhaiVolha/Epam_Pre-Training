@@ -19,7 +19,6 @@ public class PalindromeChecker {
             reversedNumber = reversedNumber * TENS + digit;
             temp = temp / TENS;
         }
-
         return number == reversedNumber;
     }
 
@@ -39,7 +38,6 @@ public class PalindromeChecker {
                 break;
             }
         }
-
         return isPalindrom;
     }
 }
