@@ -8,6 +8,10 @@ public class UniqueDigitsCounter {
     public static int countUniqueDigits(int number) throws NotNaturalNumberException {
         String uniqueDigits = "";
         int digit;
+        
+        if (naturalNumber <= 0) {
+            throw new NotNaturalNumberException("The number is not a natural number");
+        }
 
         if (number != 0) {
             while (number > 0) {
