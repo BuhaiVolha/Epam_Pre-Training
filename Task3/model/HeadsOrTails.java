@@ -8,7 +8,7 @@ public class HeadsOrTails {
 
     public static int throwCoin() {
         int headsCounter = 0;
-
+        
         // 1 - for heads
         for (int i = 0; i < AMOUNT_OF_THROWS; i++) {
             if (new Random().nextInt(SIDES_OF_COINS) == 1) {
