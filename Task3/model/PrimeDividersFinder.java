@@ -20,7 +20,7 @@ public class PrimeDividersFinder {
         }
 
         for (int i = 3; i < number / i; i += 2) {
-            if (number % i == 0) {
+            if ((number % i) == 0) {
                 primes.add(i);
                 number /=i;
             }
