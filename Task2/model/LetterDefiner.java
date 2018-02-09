@@ -34,36 +34,6 @@ public class LetterDefiner {
 
         if (letter == 'a') {
             isConsonant = false;
-        } else {
-            if (letter == 'o') {
-                isConsonant = false;
-            } else {
-                if (letter == 'i') {
-                    isConsonant = false;
-                } else {
-                    if (letter == 'e') {
-                        isConsonant = false;
-                    } else {
-                        if (letter == 'y') {
-                            isConsonant = false;
-                        } else {
-                            if (letter == 'u') {
-                                isConsonant = false;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        return isConsonant;
-    }
-
-    public static boolean isConsonant4(char letter) {
-        letter = Character.toLowerCase(letter);
-        boolean isConsonant = true;
-
-        if (letter == 'a') {
-            isConsonant = false;
         } else if (letter == 'o') {
             isConsonant = false;
         } else if (letter == 'y') {
@@ -78,13 +48,13 @@ public class LetterDefiner {
         return isConsonant;
     }
 
-    public static boolean isConsonant5(char letter) {
+    public static boolean isConsonant4(char letter) {
         letter = Character.toLowerCase(letter);
 
         return !(VOWELS.contains(Character.toString(letter)));
     }
 
-    public static boolean isConsonant6(char letter) {
+    public static boolean isConsonant5(char letter) {
         letter = Character.toLowerCase(letter);
         boolean isConsonant = true;
 
@@ -94,7 +64,7 @@ public class LetterDefiner {
         return isConsonant;
     }
 
-    public static boolean isConsonant7(char letter) {
+    public static boolean isConsonant6(char letter) {
         letter = Character.toLowerCase(letter);
         boolean isConsonant = true;
 
@@ -109,7 +79,7 @@ public class LetterDefiner {
         return isConsonant;
     }
 
-    public static boolean isConsonant8(char letter) {
+    public static boolean isConsonant7(char letter) {
         letter = Character.toLowerCase(letter);
 
         Pattern p = Pattern.compile("[" + VOWELS + "]");
@@ -118,7 +88,7 @@ public class LetterDefiner {
         return !m.matches();
     }
 
-    public static boolean isConsonant9(char letter) {
+    public static boolean isConsonant8(char letter) {
         letter = Character.toLowerCase(letter);
 
         for (Vowels v : Vowels.values()) {
