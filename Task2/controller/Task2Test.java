@@ -21,7 +21,7 @@ public class Task2Test {
         char letter = 'u';
 
         print("The letter " + letter + " is "
-                + (LetterDefiner.isConsonant9(letter) ? "consonant!" : "vowel!"));
+                + (LetterDefiner.isConsonant8(letter) ? "consonant!" : "vowel!"));
 
         // Task 3
         
