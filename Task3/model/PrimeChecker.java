@@ -7,7 +7,7 @@ public class PrimeChecker {
     public static boolean isPrime(int number) throws NotNaturalNumberException {
         boolean isPrime = false;
         int squareRoot = (int)Math.sqrt(number);
-
+        
         if (number <= 0) {
             throw new NotNaturalNumberException("The number is not a natural number");
         }
