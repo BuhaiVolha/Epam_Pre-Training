@@ -45,7 +45,7 @@ public class RaiserToPower {
         }
 
         if ((b & 1) == 1) {
-            return powRecursive(a,b - 1) * a;
+            return powRecursive(a, b - 1) * a;
         } else {
             result = powRecursive(a, b >> 1);
             return result * result;
