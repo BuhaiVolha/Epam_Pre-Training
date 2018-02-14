@@ -24,7 +24,7 @@ public class Task3Test {
 
         int naturalNumber = 274553981;
         try {
-            int largestDigit = TheLargestDigitFinder.findLargestDigit(naturalNumber);
+            int largestDigit = LargestDigitFinder.findLargestDigit(naturalNumber);
 
             print("The largest digit in a natural number "
                     + naturalNumber + " is "
