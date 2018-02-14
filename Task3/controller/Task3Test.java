@@ -37,7 +37,7 @@ public class Task3Test {
 
         try {
             print("The number " + number + " is "
-                    + ((PalindromeChecker.isPalindrome(number))
+                    + ((PalindromeChecker.checkIfPalindrome(number))
                     ? "a palindrome!" : "not a palindrome!"));
         } catch (NotNaturalNumberException e) {
             print("The number must be larger than 0!");
@@ -72,8 +72,8 @@ public class Task3Test {
         int secondNumber = 10;
 
         try {
-            int gcd = GCDAndLCMFinder.getGreatestCommonDivisor(firstNumber, secondNumber);
-            int lcm = GCDAndLCMFinder.getLeastCommonMultiply(firstNumber, secondNumber);
+            int gcd = GCDAndLCMFinder.countGreatestCommonDivisor(firstNumber, secondNumber);
+            int lcm = GCDAndLCMFinder.countLeastCommonMultiply(firstNumber, secondNumber);
 
             print("The numbers are " + firstNumber
                     + " and " + secondNumber
