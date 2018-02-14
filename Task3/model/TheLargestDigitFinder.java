@@ -1,7 +1,6 @@
 package by.epam_pre_training.task3.model;
 
 import by.epam_pre_training.task3.exceptions.NotNaturalNumberException;
-import static by.epam_pre_training.task3.constants.Constants.*;
 
 public class TheLargestDigitFinder {
 
@@ -14,12 +13,12 @@ public class TheLargestDigitFinder {
         }
 
         while (naturalNumber > 0) {
-            digit = naturalNumber % TENS;
+            digit = naturalNumber % 10;
 
             if (digit > largestDigit) {
                 largestDigit = digit;
             }
-            naturalNumber /= TENS;
+            naturalNumber /= 10;
         }
         return largestDigit;
     }
