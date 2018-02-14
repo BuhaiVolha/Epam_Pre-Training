@@ -1,7 +1,6 @@
 package by.epam_pre_training.task3.controller;
 
 import static by.epam_pre_training.task3.View.*;
-
 import by.epam_pre_training.task3.exceptions.NotNaturalNumberException;
 import by.epam_pre_training.task3.model.*;
 
