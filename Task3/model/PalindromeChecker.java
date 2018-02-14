@@ -7,15 +7,13 @@ public class PalindromeChecker {
     public static boolean checkIfPalindrome(int number) throws NotNaturalNumberException {
         int temp = number;
         int reversedNumber = 0;
-        int digit;
 
         if (number <= 0) {
             throw new NotNaturalNumberException("The number is not a natural number");
         }
 
         while (temp != 0) {
-            digit = temp % 10;
-            reversedNumber = reversedNumber * 10 + digit;
+            reversedNumber = reversedNumber * 10 + temp % 10;
             temp = temp / 10;
         }
         return number == reversedNumber;
