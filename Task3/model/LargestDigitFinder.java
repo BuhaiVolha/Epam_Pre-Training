@@ -5,12 +5,11 @@ import by.epam_pre_training.task3.exceptions.NotNaturalNumberException;
 public class LargestDigitFinder {
 
     public static int findLargestDigit(int naturalNumber) throws NotNaturalNumberException {
+        
+        Validator.validate(naturalNumber);
+       
         int largestDigit = 0;
         int digit;
-
-        if (naturalNumber <= 0) {
-            throw new NotNaturalNumberException("The number is not a natural number");
-        }
 
         while (naturalNumber > 0) {
             digit = naturalNumber % 10;
