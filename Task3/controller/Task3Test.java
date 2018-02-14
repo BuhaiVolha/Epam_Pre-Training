@@ -12,13 +12,17 @@ public class Task3Test {
         // Task1
         
         int throwsAmount = 1000;
-        int heads = HeadsOrTails.throwCoin(throwsAmount);
-        int tails = throwsAmount - heads;
+        try {
+            int heads = HeadsOrTails.throwCoin(throwsAmount);
+            int tails = throwsAmount - heads;
 
-        print("In " + throwsAmount
-                + " throws the coin landed "
-                + heads + " times on heads and "
-                + tails + " times on tails");
+            print("In " + throwsAmount
+                    + " throws the coin landed "
+                    + heads + " times on heads and "
+                    + tails + " times on tails");
+        } catch (NotNaturalNumberException e) {
+            print("The number must be larger than 0!");
+        }
 
         // Task 2.1
 
