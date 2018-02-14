@@ -1,10 +1,14 @@
 package by.epam_pre_training.task3.model;
 
+import static by.epam_pre_training.task3.validator.Validator.*;
 import java.util.Random;
 
 public class HeadsOrTails {
 
-    public static int throwCoin(int throwsAmount) {
+    public static int throwCoin(int throwsAmount) throws throws NotNaturalNumberException {
+        
+        validate(throwsAmount);
+        
         int headsCounter = 0;
         Random rand = new Random();
 
