@@ -5,7 +5,7 @@ import by.epam_pre_training.task3.exceptions.NotNaturalNumberException;
 public class PerfectNumberChecker {
 
     public static boolean checkIfPerfect(int number) throws NotNaturalNumberException {
-        int sum = 0;
+        int sum = 1;
         int top = number / 2;
 
         if (number <= 0) {
@@ -13,7 +13,7 @@ public class PerfectNumberChecker {
         }
 
 
-        for (int i = 1; i <= top; i++) {
+        for (int i = 2; i <= top; i++) {
             if ((number % i) == 0) {
                 sum += i;
             }
