@@ -49,7 +49,7 @@ public class Task3Test {
 
         try {
             print("The number " + possiblyPrimeNumber + " is "
-                    + ((PrimeChecker.isPrime(possiblyPrimeNumber))
+                    + ((PrimeChecker.checkIfPrime(possiblyPrimeNumber))
                     ? "a prime!" : "not a prime!"));
         } catch (NotNaturalNumberException e) {
             print("The number must be larger than 0!");
