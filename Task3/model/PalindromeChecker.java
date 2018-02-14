@@ -1,11 +1,10 @@
 package by.epam_pre_training.task3.model;
 
 import by.epam_pre_training.task3.exceptions.NotNaturalNumberException;
-import static by.epam_pre_training.task3.constants.Constants.*;
 
 public class PalindromeChecker {
 
-    public static boolean isPalindrome(int number) throws NotNaturalNumberException {
+    public static boolean checkIfPalindrome(int number) throws NotNaturalNumberException {
         int temp = number;
         int reversedNumber = 0;
         int digit;
@@ -15,15 +14,15 @@ public class PalindromeChecker {
         }
 
         while (temp != 0) {
-            digit = temp % TENS;
-            reversedNumber = reversedNumber * TENS + digit;
-            temp = temp / TENS;
+            digit = temp % 10;
+            reversedNumber = reversedNumber * 10 + digit;
+            temp = temp / 10;
         }
         return number == reversedNumber;
     }
 
 
-    public static boolean isPalindromeWithString(int naturalNumber) throws NotNaturalNumberException {
+    public static boolean checkIfPalindromeWithString(int naturalNumber) throws NotNaturalNumberException {
         String number = Integer.toString(naturalNumber);
         int numberLength = number.length() - 1;
         boolean isPalindrom = true;
