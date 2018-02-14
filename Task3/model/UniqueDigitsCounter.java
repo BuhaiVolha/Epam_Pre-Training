@@ -1,5 +1,6 @@
 package by.epam_pre_training.task3.model;
 
+import static by.epam_pre_training.task3.validator.Validator.*;
 import by.epam_pre_training.task3.exceptions.NotNaturalNumberException;
 
 public class UniqueDigitsCounter {
