@@ -98,7 +98,7 @@ public class Task3Test {
 
         int maybePerfectNumber = 8128;
         try {
-            boolean isPerfect = PerfectNumberChecker.isPerfect(maybePerfectNumber);
+            boolean isPerfect = PerfectNumberChecker.checkIfPerfect(maybePerfectNumber);
 
             print("The number " + maybePerfectNumber
                     + " is " + (isPerfect ? "perfect!"
