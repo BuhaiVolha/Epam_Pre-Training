@@ -1,16 +1,16 @@
 package by.epam_pre_training.task3.model;
 
+import static by.epam_pre_training.task3.validator.Validator.*;
 import by.epam_pre_training.task3.exceptions.NotNaturalNumberException;
 
 public class PalindromeChecker {
 
     public static boolean checkIfPalindrome(int number) throws NotNaturalNumberException {
+        
+        validate(number);
+        
         int temp = number;
         int reversedNumber = 0;
-
-        if (number <= 0) {
-            throw new NotNaturalNumberException("The number is not a natural number");
-        }
 
         while (temp != 0) {
             reversedNumber = reversedNumber * 10 + temp % 10;
@@ -21,13 +21,12 @@ public class PalindromeChecker {
 
 
     public static boolean checkIfPalindromeWithString(int naturalNumber) throws NotNaturalNumberException {
+        
+        validate(naturalNumber);
+        
         String number = Integer.toString(naturalNumber);
         int numberLength = number.length() - 1;
         boolean isPalindrom = true;
-
-        if (naturalNumber <= 0) {
-            throw new NotNaturalNumberException("The number is not a natural number");
-        }
 
         for (int i = 0, j = numberLength; i < j; i++, j--) {
             if (number.charAt(i) != number.charAt(j)) {
