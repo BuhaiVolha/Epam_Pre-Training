@@ -10,11 +10,13 @@ public class Task3Test {
     public static void main(String[] args) {
 
         // Task1
+        
+        int throwsAmount = 1000;
+        int heads = HeadsOrTails.throwCoin(throwsAmount);
+        int tails = throwsAmount - heads;
 
-        int heads = HeadsOrTails.throwCoin();
-        int tails = 1000 - heads;
-
-        print("In 1000 throws the coin landed "
+        print("In " + throwsAmount
+                + " throws the coin landed "
                 + heads + " times on heads and "
                 + tails + " times on tails");
 
