@@ -2,7 +2,7 @@ package by.epam_pre_training.task3.model;
 
 import by.epam_pre_training.task3.exceptions.NotNaturalNumberException;
 
-public class TheLargestDigitFinder {
+public class LargestDigitFinder {
 
     public static int findLargestDigit(int naturalNumber) throws NotNaturalNumberException {
         int largestDigit = 0;
