@@ -6,9 +6,7 @@ public class GCDAndLCMFinder {
 
     public static int countGreatestCommonDivisor(int a, int b) throws NotNaturalNumberException {
 
-        if ((a <= 0) || (b <= 0)) {
-            throw new NotNaturalNumberException("The numbers are not natural numbers");
-        }
+        Validator.validate(a, b);
 
         while (a != b) {
             if (a > b) {
