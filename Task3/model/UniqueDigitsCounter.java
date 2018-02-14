@@ -1,7 +1,6 @@
 package by.epam_pre_training.task3.model;
 
 import by.epam_pre_training.task3.exceptions.NotNaturalNumberException;
-import static by.epam_pre_training.task3.constants.Constants.*;
 
 public class UniqueDigitsCounter {
 
@@ -15,11 +14,11 @@ public class UniqueDigitsCounter {
 
         if (number != 0) {
             while (number > 0) {
-                digit = number % TENS;
+                digit = number % 10;
                 if (!uniqueDigits.contains(digit + "")) {
                     uniqueDigits += digit;
                 }
-                number /= TENS;
+                number /= 10;
             }
         } else {
             uniqueDigits = "0";
