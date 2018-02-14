@@ -4,7 +4,7 @@ import by.epam_pre_training.task3.exceptions.NotNaturalNumberException;
 
 public class PrimeChecker {
 
-    public static boolean isPrime(int number) throws NotNaturalNumberException {
+    public static boolean checkIfPrime(int number) throws NotNaturalNumberException {
         boolean isPrime = false;
         int squareRoot = (int)Math.sqrt(number);
         
