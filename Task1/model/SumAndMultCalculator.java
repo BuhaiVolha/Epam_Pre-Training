@@ -2,7 +2,7 @@ package by.epam_pre_training.task1;
 
 public class SumAndMultCalculator {
 
-    public static int getSumOfDigits(int n) {
+    public static int countSumOfDigits(int n) {
         n = Math.abs(n);
 
         return n % 10
@@ -12,7 +12,7 @@ public class SumAndMultCalculator {
                 + (n / 10) % 10;
     }
 
-    public static int getMultOfDigits(int n) {
+    public static int countMultOfDigits(int n) {
         n = Math.abs(n);
 
         return n % 10
