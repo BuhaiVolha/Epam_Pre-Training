@@ -12,13 +12,14 @@ public class FibonacciNumbersCounter {
 
 
     public static int countNthFibonacciNumberIterative(int position) {
-
+        int temp;
+        
         if (position > 0) {
             int a = 0;
             int b = 1;
 
             for (int i = 2; i <= position; i++) {
-                int temp = a;
+                temp = a;
                 a += b;
                 b = temp;
 
