@@ -32,21 +32,10 @@ public class RaiserToPower {
 
 
     private static double powRecursive(double a, int b) {
-        double result;
 
-        if (b == 0) {
-            return 1;
-        }
-
-        if (b == 2) {
-            return a * a;
-        }
-
-        if ((b & 1) == 1) {
-            return powRecursive(a, b - 1) * a;
-        } else {
-            result = powRecursive(a, b >> 1);
-            return result * result;
-        }
+        return (b == 0) ? 1
+                : (b == 2) ? a * a
+                : ((b & 1) == 1) ? powRecursive(a,b - 1) * a
+                : powRecursive(a, b >> 1) * powRecursive(a, b >> 1);
     }
 }
