@@ -2,7 +2,7 @@ package by.epam_pre_training.task1;
 
 public class NumberChecker {
 
-    public static boolean isRising(int n) {
+    public static boolean checkIfRising(int n) {
         n = Math.abs(n);
         int i = 0;
 
@@ -10,7 +10,7 @@ public class NumberChecker {
         return s.charAt(i++) < s.charAt(i) && s.charAt(i++) < s.charAt(i) && s.charAt(i++) < s.charAt(i);
     }
 
-    public static boolean isDecreasing(int n) {
+    public static boolean checkIfDecreasing(int n) {
         n = Math.abs(n);
         int i = 0;
 
