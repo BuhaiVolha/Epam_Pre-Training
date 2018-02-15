@@ -1,13 +1,8 @@
 package by.epam_pre_training.task4.model;
 
-import static by.epam_pre_training.task4.validator.Validator.*;
-import by.epam_pre_training.task4.exceptions.NumberEqualsZeroException;
-
 public class RaiserToPower {
 
-    public static double pow(double a, int b) throws NumberEqualsZeroException {
-        
-        validateIfZero(a);
+    public static double pow(double a, int b) {
 
         if (b > 0) {
             return powRecursive(a, b);
@@ -17,7 +12,7 @@ public class RaiserToPower {
     }
 
     private static double powIterative(double a, int b) {
-        double result = 1.0;
+        double result = 1;
 
         while (b > 0) {
             if ((b & 1) == 1) {
