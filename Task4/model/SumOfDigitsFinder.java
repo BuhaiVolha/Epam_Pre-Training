@@ -3,6 +3,7 @@ package by.epam_pre_training.task4.model;
 public class SumOfDigitsFinder {
 
     public static int findDigitsSumIterative(int number) {
+        number = Math.abs(number);
         int sum = 0;
 
         while (number != 0) {
