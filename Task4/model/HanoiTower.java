@@ -8,14 +8,8 @@ public class HanoiTower {
 
         if (rings != 0) {
             moveTower(rings - 1, source, temp, receiver);
-            moveRing(source, receiver);
+            print(source + "-->" + receiver);
             moveTower(rings - 1, temp, receiver, source);
         }
-    }
-
-
-    private static void moveRing(char source, char receiver) {
-
-        print(source + "-->" + receiver);
     }
 }
