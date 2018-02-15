@@ -15,6 +15,7 @@ public class SumOfDigitsFinder {
 
 
     public static int findDigitsSumRecursive(int number) {
+        number = Math.abs(number);
 
         return (number != 0)
                 ? number % 10 + findDigitsSumRecursive(number / 10)
