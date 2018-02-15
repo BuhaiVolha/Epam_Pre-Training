@@ -3,9 +3,11 @@ package by.epam_pre_training.task4.controller;
 import static by.epam_pre_training.task4.validator.Validator.validateIfNatural;
 import static by.epam_pre_training.task4.validator.Validator.validateIfPositive;
 import static by.epam_pre_training.task4.validator.Validator.validateIfZero;
+
 import by.epam_pre_training.task4.exceptions.NotNaturalNumberException;
 import by.epam_pre_training.task4.exceptions.NotPositiveNumberException;
 import by.epam_pre_training.task4.exceptions.NumberEqualsZeroException;
+
 import static by.epam_pre_training.task4.view.View.*;
 import by.epam_pre_training.task4.model.*;
 
@@ -30,7 +32,7 @@ public class Task4Test {
 
         try {
             validateIfZero(a);
-            double pow = RaiserToPower.pow(a,b);
+            double pow = RaiserToPower.powRecursive(a, b);
 
             System.out.printf(a + " raised to a power of "
                     + b + " equals to %.5f\n", pow);
