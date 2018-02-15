@@ -22,7 +22,7 @@ public class TestTask1 {
 
         print("The radiuses are " + r1 + " and " + r2);
         System.out.printf("The area of a ring equals: %.2f\n",
-                RingAreaCalculator.getRingArea(r1,r2));
+                RingAreaCalculator.calculateRingArea(r1, r2));
 
         // Task 3
 
@@ -44,8 +44,8 @@ public class TestTask1 {
 
         print("Your number is " + number4);
         printThere("The digits ");
-        print((NumberChecker.isRising(number4)) ? "are rising."
-                : (NumberChecker.isDecreasing(number4)) ? "are decreasing."
+        print((NumberChecker.checkIfRising(number4)) ? "are rising."
+                : (NumberChecker.checkIfDecreasing(number4)) ? "are decreasing."
                 : "don't have a strict sequence.");
 
         // Task 5
@@ -55,9 +55,9 @@ public class TestTask1 {
 
         print("Your number is " + number5);
         print("The sum of digits equals "
-                + SumAndMultCalculator.getSumOfDigits(number5));
+                + SumAndMultCalculator.countSumOfDigits(number5));
         print("The multiplication of digits equals "
-                + SumAndMultCalculator.getMultOfDigits(number5));
+                + SumAndMultCalculator.countMultOfDigits(number5));
 
         // Task 6
 
