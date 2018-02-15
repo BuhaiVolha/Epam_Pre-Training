@@ -15,7 +15,7 @@ public class Task4Test {
 
         // Task 1
 
-        int number = 112358;
+        int number = 112_358;
         int digitsSum = SumOfDigitsFinder.findDigitsSumRecursive(number);
 
         print("The number is "
@@ -41,7 +41,7 @@ public class Task4Test {
 
         // Task 3
 
-        int n = 1234567;
+        int n = 1_234_567;
         int s = 28;
 
         try {
