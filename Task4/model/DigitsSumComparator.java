@@ -12,7 +12,7 @@ public class DigitsSumComparator {
         if (n != 0) {
             s -= n % 10;
             n /= 10;
-            return (equals(n, s));
+            return equals(n, s);
         } else {
             return s == 0;
         }
