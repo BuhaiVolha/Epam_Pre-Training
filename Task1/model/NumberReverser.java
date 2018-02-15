@@ -1,18 +1,17 @@
 package by.epam_pre_training.task1;
 
 public class NumberReverser {
-    private final static int TENS = 10;
 
     public static int reverseNum(int n) {
         n = Math.abs(n);
-        int reversed = n % TENS;
+        int reversed = n % 10;
 
-        reversed = reversed * TENS + ((n /= TENS) % TENS);
-        reversed = reversed * TENS + ((n /= TENS) % TENS);
-        reversed = reversed * TENS + ((n /= TENS) % TENS);
-        reversed = reversed * TENS + ((n /= TENS) % TENS);
-        reversed = reversed * TENS + ((n /= TENS) % TENS);
-        reversed = reversed * TENS + ((n / TENS) % TENS);
+        reversed = reversed * 10 + ((n /= 10) % 10);
+        reversed = reversed * 10 + ((n /= 10) % 10);
+        reversed = reversed * 10 + ((n /= 10) % 10);
+        reversed = reversed * 10 + ((n /= 10) % 10);
+        reversed = reversed * 10 + ((n /= 10) % 10);
+        reversed = reversed * 10 + ((n / 10) % 10);
 
         return reversed;
     }
