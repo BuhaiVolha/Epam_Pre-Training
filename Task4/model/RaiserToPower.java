@@ -4,12 +4,7 @@ import by.epam_pre_training.task4.exceptions.NotRealNumberException;
 
 public class RaiserToPower {
 
-    public static double pow(double a, int b) throws NotRealNumberException {
-
-        if (a == 0) {
-            throw new NotRealNumberException("The number"
-                    + a + " is not real!");
-        }
+    public static double pow(double a, int b) {
 
         if (b > 0) {
             return powRecursive(a, b);
