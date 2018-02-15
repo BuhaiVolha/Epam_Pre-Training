@@ -8,7 +8,6 @@ public class LetterDefiner {
 
     public static boolean checkIfConsonant1(char letter) {
         letter = Character.toLowerCase(letter);
-        boolean isConsonant = true;
 
         switch (letter) {
             case 'a':
@@ -16,11 +15,12 @@ public class LetterDefiner {
             case 'e':
             case 'u':
             case 'i':
-            case 'y': isConsonant = false; break;
+            case 'y': return false;
         }
-        return isConsonant;
+        return true;
     }
 
+    
     public static boolean checkIfConsonant2(char letter) {
         letter = Character.toLowerCase(letter);
 
@@ -28,6 +28,7 @@ public class LetterDefiner {
                 || letter == 'y' || letter == 'u' || letter == 'i' );
     }
 
+    
     public static boolean checkIfConsonant3(char letter) {
         letter = Character.toLowerCase(letter);
         boolean isConsonant = true;
@@ -48,22 +49,19 @@ public class LetterDefiner {
         return isConsonant;
     }
 
+    
     public static boolean checkIfConsonant4(char letter) {
-        letter = Character.toLowerCase(letter);
-
-        return !(VOWELS.contains(Character.toString(letter)));
+ 
+        return !(VOWELS.contains(Character.toString(Character.toLowerCase(letter))));
     }
 
+    
     public static boolean checkIfConsonant5(char letter) {
-        letter = Character.toLowerCase(letter);
-        boolean isConsonant = true;
-
-        if (VOWELS.indexOf(letter) != -1) {
-            isConsonant = false;
-        }
-        return isConsonant;
+        
+        return VOWELS.indexOf(Character.toLowerCase(letter)) == -1;
     }
 
+    
     public static boolean checkIfConsonant6(char letter) {
         letter = Character.toLowerCase(letter);
         boolean isConsonant = true;
@@ -79,6 +77,7 @@ public class LetterDefiner {
         return isConsonant;
     }
 
+    
     public static boolean checkIfConsonant7(char letter) {
         letter = Character.toLowerCase(letter);
 
@@ -88,6 +87,7 @@ public class LetterDefiner {
         return !m.matches();
     }
 
+    
     public static boolean checkIfConsonant8(char letter) {
         letter = Character.toLowerCase(letter);
 
