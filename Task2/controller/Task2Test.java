@@ -21,7 +21,7 @@ public class Task2Test {
         char letter = 'u';
 
         print("The letter " + letter + " is "
-                + (LetterDefiner.isConsonant8(letter) ? "consonant!" : "vowel!"));
+                + (LetterDefiner.checkIfConsonant8(letter) ? "consonant!" : "vowel!"));
 
         // Task 3
         
@@ -36,7 +36,7 @@ public class Task2Test {
 
         print("Today is " + day + "." + month + "." + year
                 + "\nThe date of the next day is "
-                + NextDayDater.getNextDay(day, month, year));
+                + NextDayDater.countNextDay(day, month, year));
 
         // Task 5
         
