@@ -32,9 +32,12 @@ public class MagicItem {
 
     @Override
     public boolean equals(Object o) {
-
-        if (this == o) return true;
-        if (!(o instanceof MagicItem)) return false;
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
+        if (this == o) {
+            return true;
+        }
         MagicItem magicItem = (MagicItem) o;
         return getMagicPower() == magicItem.getMagicPower() &&
                 Objects.equals(getName(), magicItem.getName());
