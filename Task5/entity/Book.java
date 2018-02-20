@@ -23,11 +23,11 @@ public class Book extends MagicItem {
 
     @Override
     public boolean equals(Object o) {
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
         if (this == o) {
             return true;
-        }
-        if (!(o instanceof Book)) {
-            return false;
         }
         if (!super.equals(o)) {
             return false;
