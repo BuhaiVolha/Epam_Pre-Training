@@ -23,11 +23,11 @@ public class Potion extends MagicItem {
 
     @Override
     public boolean equals(Object o) {
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
         if (this == o) {
             return true;
-        }
-        if (!(o instanceof Potion)) {
-            return false;
         }
         if (!super.equals(o)) {
             return false;
