@@ -1,6 +1,5 @@
 package by.epam_pre_training.task5.model;
 
-import static by.epam_pre_training.task5.view.View.*;
 import by.epam_pre_training.task5.entity.MagicItem;
 import by.epam_pre_training.task5.entity.MagicStorage;
 import by.epam_pre_training.task5.utils.MyList;
@@ -32,16 +31,8 @@ public class Logic {
         return mostPowerfulItem;
     }
 
-    public static void showStorageItems(MagicStorage storage) {
-        MyList<MagicItem> items = getItemsFromStorage(storage);
 
-        for (MagicItem i : items) {
-            print(i);
-        }
-    }
-
-
-    private static MyList<MagicItem> getItemsFromStorage(MagicStorage storage) {
+    public static MyList<MagicItem> getItemsFromStorage(MagicStorage storage) {
         return storage.getMagicStorage();
     }
 }
