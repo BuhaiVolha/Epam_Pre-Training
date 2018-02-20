@@ -44,8 +44,12 @@ public class MagicStorage {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof MagicStorage)) return false;
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
+        if (this == o) {
+            return true;
+        }
         MagicStorage that = (MagicStorage) o;
         return getAmountOfItemsInside() == that.getAmountOfItemsInside() &&
                 Objects.equals(getName(), that.getName()) &&
