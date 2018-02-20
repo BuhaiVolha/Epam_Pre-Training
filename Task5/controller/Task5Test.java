@@ -13,17 +13,24 @@ public class Task5Test {
         try {
             String magicStorageName = "Tower of Magi";
             int amountOfItemsInside = 8;
-
+            
             validateIfPositive(amountOfItemsInside);
-
+            
+            // Create magicStorage using parameters from above
             MagicStorage magicStorage = new MagicStorage(magicStorageName, amountOfItemsInside);
-            print(magicStorage.toString());
+            
+            // Get information about magicStorage
+            print(magicStorage);
+            
+            // Print magicStorage's items
             printElementsOfArray(getItemsFromStorage(magicStorage));
-
+            
+            // Use Logic's methods
             print("\nTotal magic power: " +
                     countTotalMagicPower(magicStorage));
             print("\nThe most powerful item: " +
                     findMostPowerfulItem(magicStorage));
+            
         } catch (Task5Exception e) {
             print(e.getMessage());
         }
