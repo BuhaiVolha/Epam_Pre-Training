@@ -18,7 +18,7 @@ public class Task5Test {
 
             MagicStorage magicStorage = new MagicStorage(magicStorageName, amountOfItemsInside);
             print(magicStorage.toString());
-            showStorageItems(magicStorage);
+            printElementsOfArray(getItemsFromStorage(magicStorage));
 
             print("\nTotal magic power: " +
                     countTotalMagicPower(magicStorage));
