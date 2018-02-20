@@ -1,5 +1,6 @@
 package by.epam_pre_training.task5.view;
 
+
 import by.epam_pre_training.task5.utils.MyList;
 
 public class View {
@@ -16,8 +17,10 @@ public class View {
 
     public static <T> void printElementsOfArray(MyList<T> array) {
 
-        for (T i : array) {
-            print(i);
+        if (array != null) {
+            for (T i : array) {
+                print(i);
+            }
         }
     }
 }
