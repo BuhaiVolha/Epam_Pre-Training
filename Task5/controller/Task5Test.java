@@ -19,7 +19,7 @@ public class Task5Test {
             // Create magicStorage using parameters from above
             MagicStorage magicStorage = new MagicStorage(magicStorageName, amountOfItemsInside);
             
-            // Get information about magicStorage
+            // Get information about magicStorage using toString()
             print(magicStorage);
             
             // Print magicStorage's items
