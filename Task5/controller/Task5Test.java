@@ -22,7 +22,7 @@ public class Task5Test {
             MyList<MagicItem> items = createMagicItemArray(amountOfItemsInside);
             checkIfArrayIsEmpty(items);
 
-            MagicStorage magicStorage = new MagicStorage(magicStorageName, amountOfItemsInside, items);
+            MagicStorage magicStorage = new MagicStorage(magicStorageName, items);
 
             print(magicStorage);
 
@@ -32,7 +32,6 @@ public class Task5Test {
                     countTotalMagicPower(magicStorage));
             print("\nThe most powerful item: " +
                     findMostPowerfulItem(magicStorage));
-            
         } catch (Task5Exception e) {
             print(e.getMessage());
         }
