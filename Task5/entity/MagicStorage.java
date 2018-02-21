@@ -7,14 +7,12 @@ import java.util.Objects;
 public class MagicStorage {
 
     private String name;
-    private int amountOfItemsInside;
     private MyList<MagicItem> items;
 
     public MagicStorage() {}
 
-    public MagicStorage(String name, int amountOfItemsInside, MyList<MagicItem> items) {
+    public MagicStorage(String name, MyList<MagicItem> items) {
         setName(name);
-        setAmountOfItemsInside(amountOfItemsInside);
         setItems(items);
     }
 
@@ -27,11 +25,7 @@ public class MagicStorage {
     }
 
     public int getAmountOfItemsInside() {
-        return amountOfItemsInside;
-    }
-
-    public void setAmountOfItemsInside(int amountOfItemsInside) {
-        this.amountOfItemsInside = amountOfItemsInside;
+        return items.size();
     }
 
     public MyList<MagicItem> getItems() {
@@ -65,7 +59,7 @@ public class MagicStorage {
     @Override
     public String toString() {
         return "Magic Storage's name: " + name
-                + ", consists of " + amountOfItemsInside +
+                + ", consists of " + getAmountOfItemsInside() +
                 " items" +
                 ".\n";
     }
