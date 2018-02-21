@@ -17,7 +17,7 @@ public class DigitsSumComparator {
         
         while (n != 0) {
             s -= n % 10;
-            n /=10;
+            n /= 10;
         }
         return s == 0;
     }
