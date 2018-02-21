@@ -3,7 +3,7 @@ package by.epam_pre_training.task5.controller;
 import static by.epam_pre_training.task5.model.Logic.*;
 import by.epam_pre_training.task5.entity.MagicItem;
 import by.epam_pre_training.task5.entity.MagicStorage;
-import by.epam_pre_training.task5.exceptions.Task5Exception;
+import by.epam_pre_training.task5.exceptions.LogicTask5Exception;
 import static by.epam_pre_training.task5.utils.MagicItemCreator.*;
 import by.epam_pre_training.task5.utils.MyList;
 import static by.epam_pre_training.task5.utils.Validator.*;
@@ -32,7 +32,8 @@ public class Task5Test {
                     countTotalMagicPower(magicStorage));
             print("\nThe most powerful item: " +
                     findMostPowerfulItem(magicStorage));
-        } catch (Task5Exception e) {
+            
+        } catch (LogicTask5Exception e) {
             print(e.getMessage());
         }
     }
