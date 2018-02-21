@@ -4,12 +4,12 @@ import by.epam_pre_training.task5.entity.*;
 import java.util.Random;
 
 public class MagicItemCreator {
-    
+
     private static final int AMOUNT_OF_ITEMS = 4;
     private static final int MAXIMUM_MAGIC_POWER = 21;
     private static final int MAXIMUM_SPELL_LEVEL = 10;
     private static final int MAXIMUM_WEIGHT_IN_GRAMS = 1001;
-    
+
     private static final String[] BOOK_NAMES = {"Ork Culture", "Evil Lizards", "Necromancy for beginners",
             "Dark Secrets", "Useless Book", "Ten Most Powerful Wizards", "Elven Fashion", "Ancient Drawings",
             "Forgotten Spells", "Cursed Armor", "Dragon Potions", "Magic History"};
@@ -32,11 +32,9 @@ public class MagicItemCreator {
             "Healing Oregano", "Magical Rose", "Blessed Rosemary"};
 
 
-    // Creates a list of magic items, 
-    // that is used in the constructor of MagicStorage class
-    // to fill it's magicStore list
-    
-    public static MyList<MagicItem> fillStorage(int size) {
+    // Creates a list of magic items,
+
+    public static MyList<MagicItem> createMagicItemArray(int size) {
         MyList<MagicItem> items = new DynamicArray<>();
 
         for (int i = 0; i < size; i++) {
@@ -47,7 +45,7 @@ public class MagicItemCreator {
 
 
     // Creates a random MagicItem object
-    
+
     private static MagicItem createMagicItem() {
         MagicItem magicItem = null;
 
