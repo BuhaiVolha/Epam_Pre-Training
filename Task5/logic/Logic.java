@@ -7,32 +7,31 @@ import by.epam_pre_training.task5.utils.MyList;
 public class Logic {
 
     public static int countTotalMagicPower(MagicStorage storage) {
-        MyList<MagicItem> items = getItemsFromStorage(storage);
+        MyList<MagicItem> items = storage.getItems();
         int sum = 0;
 
-        for (MagicItem item : items) {
-            sum += item.getMagicPower();
+        if (items != null) {
+            for (MagicItem item : items) {
+                sum += item.getMagicPower();
+            }
         }
         return sum;
     }
 
 
     public static MagicItem findMostPowerfulItem(MagicStorage storage) {
-        MyList<MagicItem> items = getItemsFromStorage(storage);
+        MyList<MagicItem> items = storage.getItems();
         int maxMagicPower = -1;
         MagicItem mostPowerfulItem = null;
 
-        for (MagicItem item : items) {
-            if (item.getMagicPower() > maxMagicPower) {
-                maxMagicPower = item.getMagicPower();
-                mostPowerfulItem = item;
+        if (items != null) {
+            for (MagicItem item : items) {
+                if (item.getMagicPower() > maxMagicPower) {
+                    maxMagicPower = item.getMagicPower();
+                    mostPowerfulItem = item;
+                }
             }
         }
         return mostPowerfulItem;
-    }
-
-
-    public static MyList<MagicItem> getItemsFromStorage(MagicStorage storage) {
-        return storage.getMagicStorage();
     }
 }
