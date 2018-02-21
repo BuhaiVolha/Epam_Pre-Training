@@ -10,8 +10,8 @@ public class Logic {
         MyList<MagicItem> items = storage.getItems();
         int sum = 0;
 
-        if (items != null) {
-            for (MagicItem item : items) {
+        for (MagicItem item : items) {
+            if (item != null) {
                 sum += item.getMagicPower();
             }
         }
@@ -24,8 +24,8 @@ public class Logic {
         int maxMagicPower = -1;
         MagicItem mostPowerfulItem = null;
 
-        if (items != null) {
-            for (MagicItem item : items) {
+        for (MagicItem item : items) {
+            if (item != null) {
                 if (item.getMagicPower() > maxMagicPower) {
                     maxMagicPower = item.getMagicPower();
                     mostPowerfulItem = item;
