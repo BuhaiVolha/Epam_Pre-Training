@@ -1,6 +1,5 @@
 package by.epam_pre_training.task5.entity;
 
-import by.epam_pre_training.task5.utils.MagicItemCreator;
 import by.epam_pre_training.task5.utils.MyList;
 import java.util.Objects;
 
