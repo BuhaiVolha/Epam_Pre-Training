@@ -17,7 +17,7 @@ public class Validator {
 
     public static <T> void checkIfArrayIsEmpty(MyList<T> array) throws EmptyArrayException {
 
-        if (array.isEmpty()) {
+        if ((array == null) || (array.size() == 0)) {
             throw new EmptyArrayException("The array is empty!");
         }
     }
