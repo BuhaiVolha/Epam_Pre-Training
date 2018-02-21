@@ -32,6 +32,7 @@ public class Task5Test {
                     countTotalMagicPower(magicStorage));
             print("\nThe most powerful item: " +
                     findMostPowerfulItem(magicStorage));
+            
         } catch (Task5Exception e) {
             print(e.getMessage());
         }
