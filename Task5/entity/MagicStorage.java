@@ -8,14 +8,14 @@ public class MagicStorage {
 
     private String name;
     private int amountOfItemsInside;
-    private MyList<MagicItem> magicStorage;
+    private MyList<MagicItem> items;
 
     public MagicStorage() {}
 
-    public MagicStorage(String name, int amountOfItemsInside) {
+    public MagicStorage(String name, int amountOfItemsInside, MyList<MagicItem> items) {
         setName(name);
         setAmountOfItemsInside(amountOfItemsInside);
-        setMagicStorage(MagicItemCreator.fillStorage(amountOfItemsInside));
+        setItems(items);
     }
 
     public String getName() {
@@ -34,12 +34,12 @@ public class MagicStorage {
         this.amountOfItemsInside = amountOfItemsInside;
     }
 
-    public MyList<MagicItem> getMagicStorage() {
-        return magicStorage;
+    public MyList<MagicItem> getItems() {
+        return items;
     }
 
-    public void setMagicStorage(MyList<MagicItem> magicStorage) {
-        this.magicStorage = magicStorage;
+    public void setItems(MyList<MagicItem> items) {
+        this.items = items;
     }
 
     @Override
@@ -53,13 +53,13 @@ public class MagicStorage {
         MagicStorage that = (MagicStorage) o;
         return getAmountOfItemsInside() == that.getAmountOfItemsInside() &&
                 Objects.equals(getName(), that.getName()) &&
-                Objects.equals(getMagicStorage(), that.getMagicStorage());
+                Objects.equals(getItems(), that.getItems());
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(getName(), getAmountOfItemsInside(), getMagicStorage());
+        return Objects.hash(getName(), getAmountOfItemsInside(), getItems());
     }
 
     @Override
