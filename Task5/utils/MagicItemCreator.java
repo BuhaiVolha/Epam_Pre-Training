@@ -10,7 +10,7 @@ public class MagicItemCreator {
     
     // Creates a list of magic items
 
-    public static MyList<MagicItem> createMagicItemArray(int size) {
+    public static MyList<MagicItem> createMagicItemList(int size) {
         MyList<MagicItem> items = new DynamicArray<>();
 
         for (int i = 0; i < size; i++) {
