@@ -19,7 +19,7 @@ public class Task5Test {
             int amountOfItemsInside = 8;
             validateArrayLengthArgument(amountOfItemsInside);
 
-            MyList<MagicItem> items = createMagicItemArray(amountOfItemsInside);
+            MyList<MagicItem> items = createMagicItemList(amountOfItemsInside);
             validateArrayLength(items);
 
             MagicStorage magicStorage = new MagicStorage(magicStorageName, items);
