@@ -33,7 +33,7 @@ public class Task5Test {
             print("\nThe most powerful item: " +
                     findMostPowerfulItem(magicStorage));
 
-        } catch (LogicTask5Exception e) {
+        } catch (IllegalArrayLengthException | EmptyArrayException e) {
             print(e.getMessage());
         }
     }
