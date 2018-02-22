@@ -9,7 +9,7 @@ public class FibonacciNumbersCounter {
                     + countNthFibonacciNumber(position - 2);
         }
         if (position > 0) {
-            return  position - 1;
+            return position - 1;
         }
         return -1;
     }
