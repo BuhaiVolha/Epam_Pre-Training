@@ -8,13 +8,12 @@ public class DigitsSumComparator {
             s -= n % 10;
             n /= 10;
             return equals(n, s);
-        } else {
-            return s == 0;
         }
+        return s == 0;
     }
 
     public static boolean equalsIterative(int n, int s) {
-        
+
         while (n != 0) {
             s -= n % 10;
             n /= 10;
