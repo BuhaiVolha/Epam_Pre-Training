@@ -2,8 +2,6 @@ package by.epam.buhai.task6.model;
 
 import by.epam.buhai.task6.exceptions.StackEmptyException;
 import by.epam.buhai.task6.exceptions.StackOverflowException;
-import by.epam.buhai.task6.utils.AbstractMyStack;
-import by.epam.buhai.task6.utils.MyStackArray;
 
 public class Logic {
 
@@ -14,7 +12,7 @@ public class Logic {
             string.push(s.charAt(i));
         }
 
-        String reversedString = "";
+       String reversedString = "";
 
         while(!string.isEmpty()) {
             reversedString += string.pop();
@@ -22,3 +20,4 @@ public class Logic {
         return s.equals(reversedString);
     }
 }
+
