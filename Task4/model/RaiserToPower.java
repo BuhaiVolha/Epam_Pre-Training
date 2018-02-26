@@ -4,15 +4,17 @@ public class RaiserToPower {
 
     // recursive approach
     
-    public static double powRecursive(double base, int exponent) {
-
-        return (exponent < 0) ? 1.0 / powRecursive(base, -exponent)
-                : (exponent == 0) ? 1
-                : (exponent == 1) ? base
-                : (exponent == 2) ? base * base
-                : ((exponent & 1) == 1) ? powRecursive(base,exponent - 1) * base
-                : powRecursive(base, exponent >> 1)
-                * powRecursive(base, exponent >> 1);
+    public static double powRecursive(double a, int b) {
+        
+        if (b > 0) {
+            return a * powRecursive(a, b - 1);
+        }
+        
+        if (b < 0) {
+            return (1 / a) * powRecursive(a, b + 1);
+        }
+        
+        return 1;
     }
     
     
