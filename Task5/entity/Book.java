@@ -48,11 +48,10 @@ public class Book extends MagicItem {
 
     @Override
     public String toString() {
-        return "Book, "
+        return "Book, " 
                 + super.toString()
-                + (withPictures
-                ? ", with pictures"
-                : ", without pictures") +
-                ".";
+                + (withPictures ? ", with pictures"
+                : ", without pictures") 
+                + ".";
     }
 }
