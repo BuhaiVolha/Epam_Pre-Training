@@ -5,8 +5,8 @@ import by.epam_pre_training.task5.entity.MagicItem;
 import by.epam_pre_training.task5.entity.MagicStorage;
 import by.epam_pre_training.task5.exceptions.EmptyArrayException;
 import by.epam_pre_training.task5.exceptions.IllegalArrayLengthException;
-import by.epam_pre_training.task5.utils.MagicItemCreator;
-import by.epam_pre_training.task5.utils.MyList;
+import by.epam_pre_training.task5.generator.MagicItemCreator;
+import by.epam_pre_training.task5.container.MyList;
 import static by.epam_pre_training.task5.utils.Validator.*;
 import static by.epam_pre_training.task5.view.View.*;
 
