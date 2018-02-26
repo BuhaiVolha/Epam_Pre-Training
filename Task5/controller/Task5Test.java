@@ -3,8 +3,9 @@ package by.epam_pre_training.task5.controller;
 import static by.epam_pre_training.task5.model.Logic.*;
 import by.epam_pre_training.task5.entity.MagicItem;
 import by.epam_pre_training.task5.entity.MagicStorage;
-import by.epam_pre_training.task5.exceptions.LogicTask5Exception;
-import static by.epam_pre_training.task5.utils.MagicItemCreator.*;
+import by.epam_pre_training.task5.exceptions.EmptyArrayException;
+import by.epam_pre_training.task5.exceptions.IllegalArrayLengthException;
+import by.epam_pre_training.task5.utils.MagicItemCreator;
 import by.epam_pre_training.task5.utils.MyList;
 import static by.epam_pre_training.task5.utils.Validator.*;
 import static by.epam_pre_training.task5.view.View.*;
@@ -15,17 +16,15 @@ public class Task5Test {
 
         try {
             String magicStorageName = "Tower of Magi";
+            int numberOfItemsInside = 8;
+            validateArrayLengthArgument(numberOfItemsInside);
 
-            int amountOfItemsInside = 8;
-            validateArrayLengthArgument(amountOfItemsInside);
-
-            MyList<MagicItem> items = createMagicItemList(amountOfItemsInside);
+            MagicItemCreator creator = MagicItemCreator.getInstance();
+            MyList<MagicItem> items = creator.createMagicItemList(numberOfItemsInside);
             validateArrayLength(items);
 
             MagicStorage magicStorage = new MagicStorage(magicStorageName, items);
-
             print(magicStorage);
-
             printElementsOfArray(magicStorage.getItems());
 
             print("\nTotal magic power: " +
