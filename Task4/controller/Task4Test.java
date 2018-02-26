@@ -69,18 +69,18 @@ public class Task4Test {
 
         // Task 5
 
-        int ringsAmount = 3;
+        int numberOfRings = 3;
         char source = 'A';
         char receiver = 'B';
         char temp = 'C';
 
         try {
-            validateIfNatural(ringsAmount);
+            validateIfNatural(numberOfRings);
 
-            HanoiTower.moveTower(ringsAmount, source, receiver, temp);
+            String towerMovement = HanoiTower.showTowerMovement(numberOfRings, source, receiver, temp);
+            print(towerMovement);
+            
         } catch (NotNaturalNumberException e) {
             print("The tower must consist of at least 1 ring!");
         }
-
-    }
 }
