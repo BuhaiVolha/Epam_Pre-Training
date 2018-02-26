@@ -1,5 +1,7 @@
-package by.epam_pre_training.task5.utils;
+package by.epam_pre_training.task5.generator;
 
+import by.epam_pre_training.task5.container.DynamicArray;
+import by.epam_pre_training.task5.container.MyList;
 import by.epam_pre_training.task5.entity.*;
 import java.util.Random;
 
