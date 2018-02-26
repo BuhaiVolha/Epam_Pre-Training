@@ -2,7 +2,7 @@ package by.epam_pre_training.task5.container;
 
 import java.util.*;
 
-public class DynamicArray<E> implements Iterable<E>, MyList<E> {
+public class DynamicArray<E> implements MyList<E> {
 
     private static final int DEFAULT_CAPACITY = 10;
 
