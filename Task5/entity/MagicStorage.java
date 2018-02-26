@@ -1,6 +1,6 @@
 package by.epam_pre_training.task5.entity;
 
-import by.epam_pre_training.task5.utils.MyList;
+import by.epam_pre_training.task5.container.MyList;
 import java.util.Objects;
 
 public class MagicStorage {
@@ -11,8 +11,8 @@ public class MagicStorage {
     public MagicStorage() {}
 
     public MagicStorage(String name, MyList<MagicItem> items) {
-        setName(name);
-        setItems(items);
+        this.name = name;
+        this.items = items;
     }
 
     public String getName() {
@@ -23,7 +23,7 @@ public class MagicStorage {
         this.name = name;
     }
 
-    public int getAmountOfItemsInside() {
+    public int getNumberOfItemsInside() {
         return items.size();
     }
 
@@ -44,7 +44,7 @@ public class MagicStorage {
             return true;
         }
         MagicStorage that = (MagicStorage) o;
-        return getAmountOfItemsInside() == that.getAmountOfItemsInside() &&
+        return getNumberOfItemsInside() == that.getNumberOfItemsInside() &&
                 Objects.equals(getName(), that.getName()) &&
                 Objects.equals(getItems(), that.getItems());
     }
@@ -52,13 +52,13 @@ public class MagicStorage {
     @Override
     public int hashCode() {
 
-        return Objects.hash(getName(), getAmountOfItemsInside(), getItems());
+        return Objects.hash(getName(), getNumberOfItemsInside(), getItems());
     }
 
     @Override
     public String toString() {
         return "Magic Storage's name: " + name
-                + ", consists of " + getAmountOfItemsInside() +
+                + ", consists of " + getNumberOfItemsInside() +
                 " items" +
                 ".\n";
     }
