@@ -12,6 +12,10 @@ public class Potion extends MagicItem {
         super(name, magicPower);
         this.color = color;
     }
+    
+    public Potion(Potion potion) {
+        this(potion.getName(), potion.getMagicPower(), potion.getColor());
+    }
 
     public String getColor() {
         return color;
