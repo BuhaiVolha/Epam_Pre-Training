@@ -12,6 +12,10 @@ public class Scroll extends MagicItem {
         super(name, magicPower);
         this.levelOfSpell = levelOfSpell;
     }
+    
+    public Scroll(Scroll scroll) {
+        this(scroll.getName(), scroll.getMagicPower(), scroll.getLevelOfSpell());
+    }
 
     public int getLevelOfSpell() {
         return levelOfSpell;
