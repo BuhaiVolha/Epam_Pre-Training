@@ -20,26 +20,21 @@ public class RaiserToPower {
     
     // iterative approach
   
-    public static double pow(double a, int b) {
-
-        if (b > 0) {
-            return powIterative(a, b);
-        } else {
-            return 1 / powIterative(a, -b);
-        }
-    }
-
-    private static double powIterative(double a, int b) {
+    public static double powIterative(double base, int exponent) {
         double result = 1.0;
+        int exponentWorkingVal = Math.abs(exponent);
+        double baseWorkingVal = base;
 
-        while (b > 0) {
-            if ((b & 1) == 1) {
-                result *= a;
+        while (exponentWorkingVal > 0) {
+            if ((exponentWorkingVal & 1) == 1) {
+                result *= baseWorkingVal;
             }
 
-            b >>= 1;
-            a *= a;
+            exponentWorkingVal >>= 1;
+            baseWorkingVal *= baseWorkingVal;
         }
-        return result;
+
+        return (exponent > 0) ? result 
+                : 1.0 / result;
     }
 }
