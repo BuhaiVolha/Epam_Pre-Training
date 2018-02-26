@@ -12,6 +12,10 @@ public class Book extends MagicItem {
         super(name, magicPower);
         this.withPictures = withPictures;
     }
+    
+    public Book(Book book) {
+        this(book.getName(), book.getMagicPower(), book.isWithPictures());
+    }
 
     public boolean isWithPictures() {
         return withPictures;
