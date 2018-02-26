@@ -1,7 +1,5 @@
 package by.epam_pre_training.task4.model;
 
-import static by.epam_pre_training.task4.view.View.*;
-
 public class HanoiTower {
     
     public static String showTowerMovement(int rings, char source, char receiver, char temp) {
