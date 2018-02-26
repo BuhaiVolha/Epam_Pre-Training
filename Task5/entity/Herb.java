@@ -12,6 +12,10 @@ public class Herb extends MagicItem {
         super(name, magicPower);
         this.weightInGrams = weightInGrams;
     }
+    
+    public Herb(Herb herb) {
+        this(herb.getName(), herb.getMagicPower(), herb.getWeightInGrams());
+    }
 
     public int getWeightInGrams() {
         return weightInGrams;
