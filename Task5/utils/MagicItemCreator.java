@@ -4,17 +4,27 @@ import by.epam_pre_training.task5.entity.*;
 import java.util.Random;
 
 public class MagicItemCreator {
-
+    private static MagicItemCreator instance;
     private static final int MAXIMUM_MAGIC_POWER = 21;
+    
+    private MagicItemCreator() {}
+    
+    public static MagicItemCreator getInstance() {
+
+        if (instance == null) {
+            return instance = new MagicItemCreator();
+        }
+        return instance;
+    }
 
     
     // Creates a list of magic items
 
-    public static MyList<MagicItem> createMagicItemList(int size) {
+    public MyList<MagicItem> createMagicItemList(int size) {
         MyList<MagicItem> items = new DynamicArray<>();
 
         for (int i = 0; i < size; i++) {
-            items.add(MagicItemCreator.createMagicItem());
+            items.add(createMagicItem(MagicItemTypes.getRandomType()));
         }
         return items;
     }
@@ -22,28 +32,27 @@ public class MagicItemCreator {
 
     // Creates a random MagicItem object
 
-    private static MagicItem createMagicItem() {
-        final int AMOUNT_OF_ITEMS = 4;
-        MagicItem magicItem = null;
+    private MagicItem createMagicItem(MagicItemTypes type) {
+        MagicItem item = null;
 
-        switch (new Random().nextInt(AMOUNT_OF_ITEMS)) {
-            case 0:
-                magicItem = createBook();
+        switch (type) {
+            case BOOK:
+                item = createBook();
                 break;
-            case 1:
-                magicItem = createHerb();
+            case HERB:
+                item = createHerb();
                 break;
-            case 2:
-                magicItem = createPotion();
+            case POTION:
+                item = createPotion();
                 break;
-            case 3:
-                magicItem = createScroll();
+            case SCROLL:
+                item = createScroll();
         }
-        return magicItem;
+        return item;
     }
 
 
-    private static Book createBook() {
+    private Book createBook() {
         final String[] BOOK_NAMES = {"Ork Culture", "Evil Lizards", "Necromancy for beginners",
             "Dark Secrets", "Useless Book", "Ten Most Powerful Wizards", "Elven Fashion", "Ancient Drawings",
             "Forgotten Spells", "Cursed Armor", "Dragon Potions", "Magic History"};
@@ -54,7 +63,7 @@ public class MagicItemCreator {
     }
 
 
-    private static Potion createPotion() {
+    private Potion createPotion() {
         final String[] POTION_NAMES = {"Curing Brew", "Holy Potion", "Bird Transformation Potion",
             "Tasty Potion", "Basilisk Potion", "Magic Power Potion", "Strawberry Elixir", "Sleepy Brew",
             "Invisibility Elixir", "Weakening Potion", "Elixir of Knowledge", "Healing Potion"};
@@ -69,7 +78,7 @@ public class MagicItemCreator {
     }
 
 
-    private static Scroll createScroll() {
+    private Scroll createScroll() {
         final int MAXIMUM_SPELL_LEVEL = 10;
         
         final String[] SCROLL_NAMES = {"Symbol of Intelligence", "Magic Symbol", "Fireball Spell",
@@ -83,7 +92,7 @@ public class MagicItemCreator {
     }
 
 
-    private static Herb createHerb() {
+    private Herb createHerb() {
         final int MAXIMUM_WEIGHT_IN_GRAMS = 1001;
         
         final String[] HERB_NAMES = {"Magical Basil", "Sacred Garlic", "Healing Mints",
