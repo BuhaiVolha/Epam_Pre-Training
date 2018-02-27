@@ -1,4 +1,4 @@
-package by.epam.buhai.task6.model;
+package by.epam_pre_training.task6.model.queue;
 
 public interface AbstractMyQueue<E> {
 
