@@ -7,7 +7,7 @@ public class Logic {
 
     public static boolean checkIfPalindrome(String s) {
         s = s.toLowerCase();
-        AbstractMyStack<Character> string = new MyStackFixedSizeArray<>();
+        AbstractMyStack<Character> string = new MyStackFixedSizeArray<>(s.length());
 
         for (int i = 0; i < s.length(); i++) {
             string.push(s.charAt(i));
