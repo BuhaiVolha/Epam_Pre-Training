@@ -42,8 +42,11 @@ public class Potion extends MagicItem {
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(super.hashCode(), getColor());
+        int prime = 13;
+        int result = super.hashCode();
+        
+        result = (prime * result) + (color != null ? color.hashCode() : 0);
+        return result;
     }
 
     @Override
