@@ -10,4 +10,5 @@ public interface AbstractMyStack<E> {
     int size();
     boolean isEmpty();
     boolean isFull();
+    
 }
