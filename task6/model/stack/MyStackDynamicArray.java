@@ -2,7 +2,7 @@ package by.epam_pre_training.task6.model.stack;
 
 import by.epam_pre_training.task6.exceptions.StackEmptyException;
 
-public class MyStackDynamicArray<E> implements AbstractMyStack<E>  {
+public class MyStackDynamicArray<E> implements AbstractMyStack<E> {
     private final static int DEFAULT_SIZE = 10;
     private int size;
     private E[] array;
@@ -28,7 +28,7 @@ public class MyStackDynamicArray<E> implements AbstractMyStack<E>  {
 
     @Override
     public void push(E element) {
-        if(isFull()){
+        if (isFull()) {
             expand();
         }
         array[++top] = element;
@@ -38,7 +38,7 @@ public class MyStackDynamicArray<E> implements AbstractMyStack<E>  {
     @Override
     public E pop() throws StackEmptyException {
 
-        if(isEmpty()){
+        if (isEmpty()) {
             throw new StackEmptyException("The stack is empty!");
         }
         E element = array[top];
@@ -57,7 +57,7 @@ public class MyStackDynamicArray<E> implements AbstractMyStack<E>  {
     }
 
 
-    private void expand(){
+    private void expand() {
         E[] newStack = (E[]) new Object[size * 2];
 
         for (int i = 0; i < size; i++) {
