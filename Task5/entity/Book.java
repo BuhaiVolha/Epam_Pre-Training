@@ -42,8 +42,11 @@ public class Book extends MagicItem {
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(super.hashCode(), isWithPictures());
+        int prime = 29;
+        int result = super.hashCode();
+        
+        result = (prime * result) + (withPictures ? 1 : 0);
+        return result;
     }
 
     @Override
