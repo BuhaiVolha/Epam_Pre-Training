@@ -42,8 +42,11 @@ public class Herb extends MagicItem {
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(super.hashCode(), getWeightInGrams());
+        int prime = 17;
+        int result = super.hashCode();
+        
+        result = (prime * result) + weightInGrams;
+        return result;
     }
 
     @Override
