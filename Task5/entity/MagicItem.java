@@ -45,8 +45,12 @@ public class MagicItem {
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(getName(), getMagicPower());
+        int prime = 29;
+        int result = 17;
+        
+        result = (prime * result) + (name != null ? name.hashCode() : 0);
+        result = (prime * result) + magicPower;
+        return result;
     }
 
     @Override
