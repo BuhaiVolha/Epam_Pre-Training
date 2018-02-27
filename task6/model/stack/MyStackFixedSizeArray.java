@@ -3,7 +3,7 @@ package by.epam_pre_training.task6.model.stack;
 import by.epam_pre_training.task6.exceptions.StackEmptyException;
 import by.epam_pre_training.task6.exceptions.StackOverflowException;
 
-public class MyStackFixedSizeArray<E> implements AbstractMyStack {
+public class MyStackFixedSizeArray<E> implements AbstractMyStack<E> {
 
     private final static int DEFAULT_SIZE = 10;
     private E[] array;
@@ -15,24 +15,29 @@ public class MyStackFixedSizeArray<E> implements AbstractMyStack {
         top = -1;
     }
 
+
     public MyStackFixedSizeArray() {
         this(DEFAULT_SIZE);
     }
+
 
     @Override
     public int size() {
         return top + 1;
     }
 
+
     @Override
     public boolean isEmpty() {
         return top == -1;
     }
 
+
     @Override
     public boolean isFull() {
         return size() == size;
     }
+
 
     @Override
     public E peek() throws StackEmptyException {
@@ -41,6 +46,7 @@ public class MyStackFixedSizeArray<E> implements AbstractMyStack {
         }
         return array[top];
     }
+
 
     @Override
     public E pop() throws StackEmptyException {
@@ -52,10 +58,11 @@ public class MyStackFixedSizeArray<E> implements AbstractMyStack {
         return element;
     }
 
-    public void push(Object element) throws StackOverflowException {
+
+    public void push(E element) throws StackOverflowException {
         if (size() == size) {
             throw new StackOverflowException("The stack is overflown!");
         }
-        array[++top] = (E) element;
+        array[++top] = element;
     }
 }
