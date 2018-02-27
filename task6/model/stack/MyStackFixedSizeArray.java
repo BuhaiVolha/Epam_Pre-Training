@@ -1,25 +1,22 @@
-package by.epam.buhai.task6.model;
+package by.epam_pre_training.task6.model.stack;
 
-import by.epam.buhai.task6.exceptions.StackEmptyException;
-import by.epam.buhai.task6.exceptions.StackOverflowException;
-import by.epam.buhai.task6.model.AbstractMyStack;
+import by.epam_pre_training.task6.exceptions.StackEmptyException;
+import by.epam_pre_training.task6.exceptions.StackOverflowException;
 
-public class MyStackArray<E> implements AbstractMyStack {
+public class MyStackFixedSizeArray<E> implements AbstractMyStack {
 
-    private int capacity = 10;
+    private final static int DEFAULT_SIZE = 10;
     private E[] array;
     private int size;
     private int top;
 
-    public MyStackArray(int size) {
+    public MyStackFixedSizeArray(int size) {
         array = (E[]) new Object[this.size = size];
         top = -1;
     }
 
-    public MyStackArray() {
-        size = capacity;
-        array = (E[]) new Object[size];
-        top = -1;
+    public MyStackFixedSizeArray() {
+        this(DEFAULT_SIZE);
     }
 
     @Override
@@ -29,7 +26,7 @@ public class MyStackArray<E> implements AbstractMyStack {
 
     @Override
     public boolean isEmpty() {
-        return top < 0;
+        return top == -1;
     }
 
     @Override
