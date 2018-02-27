@@ -1,8 +1,9 @@
-package by.epam.buhai.task6.exceptions;
+package by.epam_pre_training.task6.exceptions;
 
-public class StackOverflowException extends Exception {
+public class StackEmptyException extends RuntimeException {
 
-    public StackOverflowException(String msg) {
+    public StackEmptyException(String msg) {
         super(msg);
     }
 }
+
