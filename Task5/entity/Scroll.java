@@ -42,8 +42,11 @@ public class Scroll extends MagicItem {
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(super.hashCode(), getLevelOfSpell());
+        int prime = 11;
+        int result = super.hashCode();
+        
+        result = (prime * result) + levelOfSpell;
+        return result;
     }
 
     @Override
