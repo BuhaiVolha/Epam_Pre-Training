@@ -2,7 +2,7 @@ package by.epam_pre_training.task6.model.stack;
 
 import by.epam_pre_training.task6.exceptions.StackEmptyException;
 
-public class MyStackLinkedList<E> implements AbstractMyStack {
+public class MyStackLinkedList<E> implements AbstractMyStack<E> {
 
     private Node head;
     private int size;
@@ -31,10 +31,10 @@ public class MyStackLinkedList<E> implements AbstractMyStack {
     }
 
     @Override
-    public void push(Object element) {
+    public void push(E element) {
         Node oldHead = head;
         head = new Node();
-        head.element = (E) element;
+        head.element = element;
         head.next = oldHead;
         size++;
     }
