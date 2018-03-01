@@ -13,6 +13,10 @@ public class MagicItem {
         this.name = name;
         this.magicPower = magicPower;
     }
+    
+    public MagicItem(MagicItem magicItem) {
+        this(magicItem.getName(), magicItem.getMagicPower());
+    }
 
     public String getName() {
         return name;
