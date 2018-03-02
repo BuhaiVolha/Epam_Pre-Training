@@ -7,7 +7,12 @@ public class Task6Test {
 
     public static void main(String[] args) {
 
-        String s = "Anna";
-        print(Logic.checkIfPalindrome(s));
+        String s = "detartrated";
+
+        try {
+            print(Logic.checkIfPalindrome(s));
+        } catch (Exception e) {
+            print(e.getMessage());
+        }
     }
 }
