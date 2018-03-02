@@ -55,9 +55,4 @@ public class QueueLinkedListBased<E> extends LinkedListBase<E> implements Abstra
         }
         return first.value;
     }
-
-    @Override
-    public boolean isFull() {
-        return false;
-    }
 }
