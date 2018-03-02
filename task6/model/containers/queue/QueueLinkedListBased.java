@@ -1,9 +1,9 @@
 package by.epam_pre_training.task6.model.containers.queue;
 
 import by.epam_pre_training.task6.exceptions.QueueEmptyException;
-import by.epam_pre_training.task6.model.containers.LinkedList;
+import by.epam_pre_training.task6.model.containers.LinkedListBase;
 
-public class QueueLinkedListBased<E> extends LinkedList<E> implements AbstractQueue<E> {
+public class QueueLinkedListBased<E> extends LinkedListBase<E> implements AbstractQueue<E> {
 
     public QueueLinkedListBased() {
         first = null;
