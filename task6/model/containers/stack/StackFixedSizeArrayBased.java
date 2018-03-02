@@ -2,7 +2,7 @@ package by.epam_pre_training.task6.model.containers.stack;
 
 import by.epam_pre_training.task6.exceptions.StackOverflowException;
 
-public class StackFixedSizeArrayBased<E> extends ArrayBase<E> implements AbstractStack<E> {
+public class StackFixedSizeArrayBased<E> extends StackBase<E> {
 
     @SuppressWarnings("unchecked")
     public StackFixedSizeArrayBased(int size) {
