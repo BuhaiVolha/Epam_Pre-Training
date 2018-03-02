@@ -30,18 +30,19 @@ public abstract class LinkedListBase<E> {
 
 
     public String toString() {
+        Cell current = first;
         StringBuilder s = new StringBuilder();
 
-        while (!isEmpty()) {
-            s.append("[" + first.value + "] ");
-            first = first.next;
+        while (current != null) {
+            s.append("[").append(current.value).append("] ");
+            current = current.next;
         }
-        return s.toString();
+        return new String(s);
     }
 
 
     public String toStringRecursive() {
-        return makeString(first).toString();
+        return new String(makeString(first));
     }
 
 
@@ -51,7 +52,7 @@ public abstract class LinkedListBase<E> {
         if (cell == null) {
             return s.append("");
         }
-        s.append("[" + cell.value + "] ");
+        s.append("[").append(cell.value).append("] ");
         s.append(makeString(cell.next));
         return s;
     }
