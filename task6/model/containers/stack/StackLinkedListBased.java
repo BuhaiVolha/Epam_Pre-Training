@@ -1,9 +1,9 @@
 package by.epam_pre_training.task6.model.containers.stack;
 
 import by.epam_pre_training.task6.exceptions.StackEmptyException;
-import by.epam_pre_training.task6.model.containers.LinkedList;
+import by.epam_pre_training.task6.model.containers.LinkedListBase;
 
-public class StackLinkedListBased<E> extends LinkedList<E> implements AbstractStack<E> {
+public class StackLinkedListBased<E> extends LinkedListBase<E> implements AbstractStack<E> {
 
     public StackLinkedListBased() {
         first = null;
