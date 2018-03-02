@@ -1,6 +1,6 @@
 package by.epam_pre_training.task6.model.containers.stack;
 
-public class StackDynamicArrayBased<E> extends ArrayBase<E> implements AbstractStack<E> {
+public class StackDynamicArrayBased<E> extends StackBase<E> {
 
     @SuppressWarnings("unchecked")
     public StackDynamicArrayBased(int size) {
