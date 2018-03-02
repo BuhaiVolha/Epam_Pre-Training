@@ -1,5 +1,7 @@
 package by.epam_pre_training.task6.model.containers;
 
+import by.epam_pre_training.task6.exceptions.LogicTask6Exception;
+
 public abstract class LinkedListBase<E> {
 
     protected int size;
@@ -22,8 +24,15 @@ public abstract class LinkedListBase<E> {
         return size;
     }
 
+    
+    public abstract E peek() throws LogicTask6Exception;
 
-
+ 
+    public boolean isFull() {
+        return false;
+    } 
+    
+    
     public boolean isEmpty() {
         return first == null;
     }
