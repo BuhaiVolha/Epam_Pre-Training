@@ -17,12 +17,12 @@ public class QueueLinkedListBased<E> extends LinkedListBase<E> implements Abstra
         Cell newCell = new Cell(element);
 
         if (isEmpty()) {
-            last = newCell;
+            first = newCell;
         } else {
-            first.previous = newCell;
+            last.next = newCell;
         }
-        newCell.next = first;
-        first = newCell;
+        newCell.previous = last;
+        last = newCell;
         size++;
     }
 
