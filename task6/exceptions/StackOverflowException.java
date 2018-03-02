@@ -1,9 +1,10 @@
 package by.epam_pre_training.task6.exceptions;
 
-public class StackEmptyException extends RuntimeException {
+public class StackOverflowException extends LogicTask6Exception {
 
-    public StackEmptyException(String msg) {
+    public StackOverflowException(String msg) {
         super(msg);
     }
 }
+
 
