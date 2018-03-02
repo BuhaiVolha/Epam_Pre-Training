@@ -55,9 +55,4 @@ public class StackLinkedListBased<E> extends LinkedListBase<E> implements Abstra
         }
         return last.value;
     }
-
-    @Override
-    public boolean isFull() {
-        return false;
-    }
 }
