@@ -1,6 +1,6 @@
 package by.epam_pre_training.task6.model.containers;
 
-public abstract class LinkedListBase<E> implements AbstractStack<E> {
+public abstract class LinkedListBase<E> {
 
     protected int size;
     protected Cell first;
