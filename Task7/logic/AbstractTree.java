@@ -2,7 +2,7 @@ package by.epam_pre_training.task7.logic;
 
 import by.epam_pre_training.task7.exceptions.EmptyTreeException;
 
-public interface Tree<E> {
+public interface AbstractTree<E> {
 
     void add(E data);
     boolean contains(E data) throws EmptyTreeException;
