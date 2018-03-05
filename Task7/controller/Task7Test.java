@@ -1,9 +1,9 @@
 package by.epam_pre_training.task7.controller;
 
 import by.epam_pre_training.task7.entity.Cat;
-import by.epam_pre_training.task7.logic.AbstractTree;
-import by.epam_pre_training.task7.logic.BinaryTree;
-import static  by.epam_pre_training.task7.view.View.*;
+import by.epam_pre_training.task7.model.AbstractTree;
+import by.epam_pre_training.task7.model.BinaryTree;
+import static by.epam_pre_training.task7.view.View.*;
 import java.util.Comparator;
 
 public class Task7Test {
