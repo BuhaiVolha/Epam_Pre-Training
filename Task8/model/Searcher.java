@@ -1,12 +1,12 @@
-package by.epam_pre_training.task8.logic;
+package by.epam_pre_training.task8.model;
 
 public class Searcher<E extends Comparable<E>> {
 
     //linear search
 
     public int linearSearch(E element, E[] array) {
-
         for (int i = 0; i < array.length; i++) {
+
             if (array[i].compareTo(element) == 0) {
                 return i;
             }
@@ -21,11 +21,10 @@ public class Searcher<E extends Comparable<E>> {
 
 
     private int linearSearchRecursive(E element, int index, E[] array) {
-    
         if (index == 0) {
             return -1;
         }
-        
+
         if (array[index].compareTo(element) == 0) {
             return index;
         }
