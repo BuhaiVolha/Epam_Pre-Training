@@ -241,7 +241,7 @@ public class BinaryTree<E extends Comparable<? super E>> implements Tree<E> {
     }
 
 
-    private Comparator getComparator() {
+    private Comparator<? super E> getComparator() {
         if (comparator != null) {
             return comparator;
         }
