@@ -1,6 +1,7 @@
 package by.epam_pre_training.task7.controller;
 
 import by.epam_pre_training.task7.entity.Cat;
+import by.epam_pre_training.task7.logic.AbstractTree;
 import by.epam_pre_training.task7.logic.BinaryTree;
 import static  by.epam_pre_training.task7.view.View.*;
 import java.util.Comparator;
@@ -13,7 +14,7 @@ public class Task7Test {
         Comparator<Cat> byAge = Cat.CatAgeComparator;
         Comparator<Cat> byMouses = Cat.CatMouseCaughtNumberComparator;
 
-        BinaryTree<Cat> cats = new BinaryTree<>(byMouses);
+        AbstractTree<Cat> cats = new BinaryTree<>(byMouses);
         cats.add(new Cat("Barsik", 6, 15));
         cats.add(new Cat("Lapka", 8, 4));
         cats.add(new Cat("Murzik", 3, 22));
@@ -29,7 +30,7 @@ public class Task7Test {
         print(cats.traverseInOrder());
 
 
-        BinaryTree<Integer> integers = new BinaryTree<>();
+        AbstractTree<Integer> integers = new BinaryTree<>();
         integers.add(19);
         integers.add(3);
         integers.add(13);
