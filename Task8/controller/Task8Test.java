@@ -1,8 +1,8 @@
 package by.epam_pre_training.task8.controller;
 
 import by.epam_pre_training.task7.entity.Cat;
-import by.epam_pre_training.task8.logic.Searcher;
-import by.epam_pre_training.task8.logic.Sorter;
+import by.epam_pre_training.task8.model.Searcher;
+import by.epam_pre_training.task8.model.Sorter;
 import java.util.Comparator;
 import static by.epam_pre_training.task8.view.View.*;
 
@@ -78,10 +78,10 @@ public class Task8Test {
         Searcher<Cat> catSearcher = new Searcher<>();
         Cat lostCat = new Cat("Murzik", 3, 22);
         print("\nSearching " + lostCat.getName() + "'s index:");
-        
+
         print("\nUsing linear search:");
         print(catSearcher.linearSearchRecursive(lostCat, cats));
-        
+
         print("Using binary search:");
         print(catSearcher.binarySearch(lostCat, cats));
     }
