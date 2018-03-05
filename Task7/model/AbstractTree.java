@@ -1,4 +1,4 @@
-package by.epam_pre_training.task7.logic;
+package by.epam_pre_training.task7.model;
 
 import by.epam_pre_training.task7.exceptions.EmptyTreeException;
 
