@@ -3,7 +3,7 @@ package by.epam_pre_training.task7.logic;
 import by.epam_pre_training.task7.exceptions.EmptyTreeException;
 import java.util.Comparator;
 
-public class BinaryTree<E extends Comparable<? super E>> implements Tree<E> {
+public class BinaryTree<E extends Comparable<? super E>> implements AbstractTree<E> {
 
     private Node root;
     private Comparator<? super E> comparator;
