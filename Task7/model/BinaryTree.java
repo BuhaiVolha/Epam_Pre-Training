@@ -189,6 +189,12 @@ public class BinaryTree<E extends Comparable<? super E>> implements AbstractTree
         return root == null;
     }
     
+    
+    @Override
+    public String toString() {
+        return new String(traverseInOrder());
+    }
+    
 
     public String traverseInOrder() {
         return new String(traverseInOrder(root));
