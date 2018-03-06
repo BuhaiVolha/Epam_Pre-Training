@@ -27,9 +27,7 @@ public interface MyList<E> extends Iterable<E> {
 
     boolean isEmpty();
 
-    public Object[] toArray();
-
-    public <T> T[] toArray(T[] a);
+    E[] toArray(E[] a);
 
     Iterator<E> iterator();
 }
