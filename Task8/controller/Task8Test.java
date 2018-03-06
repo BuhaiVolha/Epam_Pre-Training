@@ -1,5 +1,8 @@
 package by.epam_pre_training.task8.controller;
 
+import by.epam_pre_training.task5.container.MyList;
+import by.epam_pre_training.task5.entity.MagicItem;
+import by.epam_pre_training.task5.generator.MagicItemCreator;
 import by.epam_pre_training.task8.exceptions.LogicTask8Exception;
 import by.epam_pre_training.task8.utils.Validator;
 import by.epam_pre_training.task7.entity.Cat;
@@ -80,13 +83,13 @@ public class Task8Test {
             Sorter<Cat> catSorterByMouses = new Sorter<>(byMouses);
 
             print("\nSorting cats by their name:");
-            printObj(catSorterByName.mergeSortRecursive(cats));
+            printEntityArray(catSorterByName.mergeSortRecursive(cats));
 
             print("\nSorting cats by their age:");
-            printObj(catSorterByAge.selectionSort(cats));
+            printEntityArray(catSorterByAge.selectionSort(cats));
 
             print("\nSorting cats by mouses caught:");
-            printObj(catSorterByMouses.insertionSort(cats));
+            printEntityArray(catSorterByMouses.insertionSort(cats));
 
             Searcher<Cat> catSearcher = new Searcher<>();
             Cat lostCat = new Cat("Murzik", 3, 22);
@@ -101,5 +104,25 @@ public class Task8Test {
         } catch (LogicTask8Exception e) {
             print(e.getMessage());
         }
+
+
+        // sorting Magic Items from 5th task
+        // creating a list of Magic Items
+
+        MagicItemCreator creator = MagicItemCreator.getInstance();
+        MyList<MagicItem> magicItemsList = creator.createMagicItemList(6);
+        MagicItem[] magicItemsArray = new MagicItem[magicItemsList.size()];
+        magicItemsArray = magicItemsList.toArray(magicItemsArray);
+
+        print("The unsorted list:");
+        printEntityArray(magicItemsArray);
+        print("\nSorting by magic power:");
+        Sorter<MagicItem> magicSorter = new Sorter<>();
+        printEntityArray(magicSorter.mergeSort(magicItemsArray));
+
+        print("\nSorting by name:");
+        Comparator<MagicItem> byName = MagicItem.MagicItemNameComparator;
+        Sorter<MagicItem> sorterByName = new Sorter<>(byName);
+        printEntityArray(sorterByName.insertionSort(magicItemsArray));
     }
 }
