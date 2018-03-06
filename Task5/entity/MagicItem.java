@@ -2,7 +2,7 @@ package by.epam_pre_training.task5.entity;
 
 import java.util.Objects;
 
-public class MagicItem {
+public class MagicItem implements Comparable<MagicItem> {
 
     private String name;
     private int magicPower;
@@ -63,5 +63,10 @@ public class MagicItem {
                 + name
                 + ", magic power: "
                 + magicPower;
+    }
+    
+    @Override
+    public int compareTo(MagicItem other) {
+        return Integer.compare(this.magicPower, other.getMagicPower());
     }
 }
