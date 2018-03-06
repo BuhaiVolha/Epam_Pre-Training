@@ -68,7 +68,6 @@ public class Sorter<E extends Comparable<E>> {
 //            E temp = array[i];
 //            int j;
 //
-//            //for (j = i; (j > 0) && ((array[j - 1]).compareTo(temp)) > 0; i--) {
 //            for (j = i; (j > 0) && (getComparator().compare(array[j - 1], temp) > 0); i--) {
 //                array[j] = array[j - 1];
 //            }
