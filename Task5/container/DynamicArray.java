@@ -181,16 +181,11 @@ public class DynamicArray<E> implements MyList<E> {
         size = 0;
     }
 
+    
     // Convert to an array of obj
-    @Override
-    public Object[] toArray() {
-        return Arrays.copyOf(array, size);
-    }
-
-    // Convert to an array of E elements
     @SuppressWarnings("unchecked")
     @Override
-    public <E> E[] toArray(E[] a) {
+    public E[] toArray(E[] a) {
         return (E[]) Arrays.copyOf(array, size, a.getClass());
     }
 
