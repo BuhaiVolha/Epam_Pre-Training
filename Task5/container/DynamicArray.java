@@ -10,11 +10,11 @@ public class DynamicArray<E> implements MyList<E> {
     private int size;
 
     // The storage for the elements.
-    private Object[] array;
+    private E[] array;
 
     // Constructor for an empty DynamicArray
     public DynamicArray() {
-        array = new Object[DEFAULT_CAPACITY];
+        array = (E[]) new Object[DEFAULT_CAPACITY];
     }
 
 
@@ -22,7 +22,7 @@ public class DynamicArray<E> implements MyList<E> {
     // specified initial capacity.
     public DynamicArray(int initialCapacity) {
         if (initialCapacity > 0) {
-            array = new Object[initialCapacity];
+            array = (E[]) new Object[initialCapacity];
         } else {
             throw new IllegalArgumentException("Illegal Capacity: "+
                     initialCapacity);
@@ -119,11 +119,11 @@ public class DynamicArray<E> implements MyList<E> {
     @Override
     public E get(int index) {
         checkRange(index);
-        return (E) array[index];
+        return array[index];
     }
 
 
-    @Override
+    //@Override
     public E set(E element, int index) {
         checkRange(index);
         E value = get(index);
@@ -137,7 +137,7 @@ public class DynamicArray<E> implements MyList<E> {
     @Override
     public E remove(int index) {
         checkRange(index);
-        E value = (E) array[index];
+        E value = array[index];
         int numberToMove = size - index - 1;
 
         if (numberToMove > 0) {
@@ -150,14 +150,14 @@ public class DynamicArray<E> implements MyList<E> {
 
     // Return -1 if object is not found
     @Override
-    public int indexOf(Object obj) {
-        if (obj == null) {
+    public int indexOf(E el) {
+        if (el == null) {
             for (int i = 0; i < size; i++) {
                 if (array[i] == null) return i;
             }
         } else {
             for (int i = 0; i < size; i++) {
-                if (obj.equals(array[i])) return i;
+                if (el.equals(array[i])) return i;
             }
         }
         return -1;
@@ -165,8 +165,8 @@ public class DynamicArray<E> implements MyList<E> {
 
 
     @Override
-    public boolean contains(Object obj) {
-        return indexOf(obj) >= 0;
+    public boolean contains(E el) {
+        return indexOf(el) >= 0;
     }
 
 
@@ -181,8 +181,8 @@ public class DynamicArray<E> implements MyList<E> {
         size = 0;
     }
 
-    
-    // Convert to an array of obj
+
+    // Convert to an array of E elements
     @SuppressWarnings("unchecked")
     @Override
     public E[] toArray(E[] a) {
