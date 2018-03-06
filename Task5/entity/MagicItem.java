@@ -66,7 +66,17 @@ public class MagicItem implements Comparable<MagicItem> {
     }
     
     @Override
-    public int compareTo(MagicItem other) {
-        return Integer.compare(this.magicPower, other.getMagicPower());
+    public int compareTo(MagicItem o) {
+        return Integer.compare(this.magicPower, o.getMagicPower());
     }
+
+    public static Comparator<MagicItem> MagicItemNameComparator = new Comparator<MagicItem>() {
+        @Override
+        public int compare(MagicItem magicItem1, MagicItem magicItem2) {
+            String name1 = magicItem1.getName().toUpperCase();
+            String name2 = magicItem2.getName().toUpperCase();
+
+            return name1.compareTo(name2);
+        }
+    };
 }
