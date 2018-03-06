@@ -15,13 +15,11 @@ public interface MyList<E> extends Iterable<E> {
 
     E get(int index);
 
-    E set(E element, int index);
-
     E remove(int index);
 
-    int indexOf(Object obj);
+    int indexOf(E el);
 
-    boolean contains(Object obj);
+    boolean contains(E el);
 
     void clear();
 
@@ -30,4 +28,5 @@ public interface MyList<E> extends Iterable<E> {
     E[] toArray(E[] a);
 
     Iterator<E> iterator();
+
 }
