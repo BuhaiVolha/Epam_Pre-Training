@@ -5,7 +5,6 @@ import by.epam_pre_training.task9.exceptions.Task9Exception;
 import by.epam_pre_training.task9.model.Logic;
 import by.epam_pre_training.task9.model.TextWorker;
 import java.io.File;
-
 import static by.epam_pre_training.task9.view.View.*;
 
 public class Task9Test {
