@@ -31,8 +31,8 @@ public class Task9Test {
             // Task 14
             // The longest palindrome substring
 
-            Text task14 = textWorker.parseText();
-            String[] result = Logic.findLongestPalindromeSubstring(task14).split(" ");
+            Text textForTask14 = textWorker.parseText();
+            String[] result = Logic.findLongestPalindromeSubstring(textForTask14).split(" ");
             print("The word with the longest palindrome substring is "
                     + result[0]
                     + ", the palindrome is "
@@ -42,9 +42,9 @@ public class Task9Test {
 
             // Task 15
 
-            Text task15 = textWorker.parseText();
+            Text textForTask15 = textWorker.parseText();
             print("\nChanging every word by deleting all occurrences of it's first letter in it:\n");
-            print(Logic.removeFirstLetterEveryWhereInTheWord(task15));
+            print(Logic.removeFirstLetterEveryWhereInTheWord(textForTask15));
 
         } catch (Task9Exception e) {
             print(e.getCause());
