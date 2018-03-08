@@ -14,9 +14,9 @@ public class Task9Test {
         // setting path
         String separator = File.separator;
         String path = "D:" + separator + "document.txt";
-
-        // reading a file
+        
         try {
+            // reading a file
             TextWorker textWorker = new TextWorker(path);
             textWorker.readText();
 
