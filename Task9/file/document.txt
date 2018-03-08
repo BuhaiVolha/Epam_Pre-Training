@@ -1,0 +1,3 @@
+What does Java stand for? Java is not an acronym (not even Just Another Vague Acronym :-)). 
+The language was first named Oak. After the tree outside James' window.
+The lawyers found a computer company called Oak so, legend has it, the gang went out to the local cafe to discuss names and wound up naming it Java; the "0xCafeBabe" magic number in the class files was named after the Cafe where the Java team used to go for coffee.
